@@ -1,4 +1,4 @@
-import clamp from 'clamp';
+import * as clamp from 'clamp';
 
 // Bigger block size = lower memory usage, higher compute cycles
 const DEFAULT_BLOCK_SIZE = 10;
