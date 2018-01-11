@@ -1,6 +1,6 @@
 {
   "name": "text-store",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Super performant text container built upon caches",
   "main": "lib/index.js",
   "typings": "lib/typings/index.d.ts",
