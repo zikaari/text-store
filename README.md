@@ -17,4 +17,4 @@ const bigA$$File = new TextStore('really big file');
 
 ```
 
-> See [`lib/typings/index.d.ts`](https://github.com/chipto/text-store) for available methods and types
+> See [`lib/typings/index.d.ts`](https://github.com/chipto/text-store/blob/master/lib/typings/index.d.ts) for available methods and types
