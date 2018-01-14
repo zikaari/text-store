@@ -6,10 +6,13 @@ const DEFAULT_BLOCK_SIZE = 10;
 /**
  * Super performant text container built upon caches
  *
- * When interacting using `TextPosition`s, keep in mind that lowest value is `{ line: 1, col: 1 }`
- * When using indices, lowest value is 0
+ * Quick Notes:
+ * When interacting using `ITextPosition`s, keep in mind that lowest value is `{ line: 1, col: 1 }`
+ * When using indices, lowest value is 0.
  *
- * Also remember that most operations accepting `TextPosition`, `TextRange` and indices require them
+ * `{ line: 1, col: 1 }` === Index 0
+ *
+ * Also remember that most operations that accept `ITextPosition`, `ITextRange` and indices, require them
  * to be within document bounds. Only exception is `TextStore.prototype.getContents` which auto-clamps the range
  */
 class TextStore {
@@ -33,11 +36,10 @@ class TextStore {
     }
 
     /**
-     * Inserts given string at given `TextPosition`
+     * Inserts given string at given `ITextPosition`
      *
-     * `TextPosition` cannot exceed document bounds, min value is `{ line: 1, col: 1 }`
      * @param str String to insert
-     * @param at `TextPosition` where string should be inserted
+     * @param at `ITextPosition` where string should be inserted
      */
     public insert(str: string, at: ITextPosition) {
         if (str.length === 0) {
@@ -53,9 +55,9 @@ class TextStore {
     }
 
     /**
-     * Replaces a `TextRange` with given string
+     * Replaces a `ITextRange` with given string
      *
-     * @param range `TextRange` to replace
+     * @param range `ITextRange` to replace
      * @param str The replacement string itself
      */
     public replace(range: ITextRange, str: string) {
@@ -72,29 +74,29 @@ class TextStore {
     }
 
     /**
-     * Removes a section of text specified by `TextRange`
+     * Removes a section of text specified by `ITextRange`
      *
-     * @param range `TextRange` to remove
+     * @param range `ITextRange` to remove
      */
     public remove(range: ITextRange) {
         this.replace(range, '');
     }
 
     /**
-     * Returns size of text buffer
+     * Returns size of text buffer.
      *
-     * Similar to textStore.getContents().length, but this returns value from live cache
+     * Very efficient, as the value is returned from up-to-date cache
      */
     public getSize() {
         return this.size;
     }
 
     /**
-     * Returns contents of the buffer, optionally specify `TextRange` to get a slice
+     * Returns contents of the buffer, optionally specify `ITextRange` to get a slice
      *
-     * If you know indices directly, it might be performant to getContents without
-     * any arguments and then extracting the slice using `String.prototype.substr` etc.
-     * @param range [Optional] `TextRange` you need
+     * If indices are known, it might be performant to get contents without
+     * any arguments and then using using `String.prototype.slice` instead.
+     * @param range [Optional] `ITextRange` slice/fragment to return
      */
     public getContents(range?: ITextRange) {
         if (range) {
@@ -112,9 +114,9 @@ class TextStore {
     }
 
     /**
-     * Returns `TextPosition` from zero-based index
+     * Returns `ITextPosition` from zero-based index
      *
-     * When index = 0, `TextPosition` returned is `{ line: 1, col: 1 }`
+     * When index = 0, `ITextPosition` returned is `{ line: 1, col: 1 }`
      * @param index Zero based index of associated text buffer
      */
     public indexToPosition(index: number): ITextPosition {
@@ -180,9 +182,9 @@ class TextStore {
     }
 
     /**
-     * Returns zero based index of the associated text buffer from `TextPosition`
+     * Returns zero based index of the associated text buffer from `ITextPosition`
      *
-     * @param pos `TextPosition`, min value: `{ line: 1, col: 1 }`
+     * @param pos `ITextPosition`, min value: `{ line: 1, col: 1 }`
      */
     public positionToIndex(pos: ITextPosition) {
         const zeroBasedPos = this.convertPosToZeroBased(pos);
