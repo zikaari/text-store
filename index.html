@@ -74,8 +74,21 @@
 
 <span class="hljs-keyword">const</span> bigA$$File = <span class="hljs-keyword">new</span> TextStore(<span class="hljs-string">'really big file'</span>);
 </code></pre>
+				<h2 id="-documentation-https-chipto-github-io-text-store-classes-textstore-html-"><a href="https://chipto.github.io/text-store/classes/textstore.html">Documentation</a></h2>
+				<h2 id="you-might-want-it-if-">You might want it if:</h2>
+				<ul>
+					<li><p>You&#39;re working with really massive text files, and you will be doing frequent content manipulations here and there</p>
+					</li>
+					<li><p>You need to frequently convert between line:col based addressing and index based addressing</p>
+					</li>
+					<li><p>You will be doing both of above, thats the best use case, as <code>TextStore</code> uses caches, and re-computes only whats really needed</p>
+					</li>
+					<li><p>You have two libraries/apps where one uses line:col based addressing and other uses index based, <code>TextStore</code> can act as glue code</p>
+					</li>
+				</ul>
 				<blockquote>
-					<p>See <a href="https://github.com/chipto/text-store/blob/master/lib/typings/index.d.ts"><code>lib/typings/index.d.ts</code></a> for available methods and types</p>
+					<p><code>TextStore</code> really shines when an instance is used frequently and not just once or twice. First call to, for example <code>indexToPosition</code> will be
+					significantly slower as that&#39;s when <code>TextStore</code> will build it&#39;s internal cache, which is used to serve subsequent calls at lightning speeds</p>
 				</blockquote>
 			</div>
 		</div>
@@ -85,13 +98,28 @@
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_index_.html">"index"</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-has-type-parameter tsd-is-not-exported">
+						<a href="classes/scache.html" class="tsd-kind-icon">SCache</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/textstore.html" class="tsd-kind-icon">Text<wbr>Store</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter tsd-is-not-exported">
+						<a href="classes/vcache.html" class="tsd-kind-icon">VCache</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/itextposition.html" class="tsd-kind-icon">IText<wbr>Position</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/itextrange.html" class="tsd-kind-icon">IText<wbr>Range</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#default_block_size" class="tsd-kind-icon">DEFAULT_<wbr>BLOCK_<wbr>SIZE</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
