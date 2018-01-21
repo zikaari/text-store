@@ -66,7 +66,7 @@ class TextStore {
         this.checkTextPosition(start);
         this.checkTextPosition(end);
         this.flushCache(start);
-        const updated = this.lines[start.line].slice(0, start.col - 1) + str + this.lines[end.line].slice(end.col - 1);
+        const updated = this.lines[start.line].slice(0, start.col) + str + this.lines[end.line].slice(end.col);
         // Remove old line(s) and insert updated line(s)
         const removedLines = this.lines.splice(start.line, (end.line + 1) - start.line, ...updated.split(/\n/));
         this.size -= removedLines.join('\n').length;
