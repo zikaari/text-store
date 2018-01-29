@@ -216,7 +216,7 @@ class TextStore {
         const { line, col } = zeroBasedPos;
         const lines = this.lines;
         let currentLine = closestLineNum;
-        let offset = closestCachedLineToIdx - 1;
+        let offset = closestCachedLineToIdx;
         const cont = currentLine <= line;
         while (cont) {
             const newLineCharLen = (currentLine < lines.length ? 1 : 0); // New line char \n
