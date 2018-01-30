@@ -23,11 +23,11 @@ class TextStore {
     private lineToIndexCache: VCache<number>;
 
     /**
-     * Retruns a new interactive `TextStore` built off of given string
+     * Retruns a new interactive `TextStore` built off of given string (default '')
      *
-     * @param str Initial string to build store off of
+     * @param str Initial string to build store off of, defaults to ''
      */
-    constructor(str: string) {
+    constructor(str: string = '') {
         this.str = str;
         this.size = str.length;
         this.lines = str.split(/\n/);
@@ -98,14 +98,17 @@ class TextStore {
      * any arguments and then using using `String.prototype.slice` instead.
      * @param range [Optional] `ITextRange` slice/fragment to return
      */
-    public getContents(range?: ITextRange) {
+    public getContents(range?: ITextRange): string {
         if (range) {
             const start = this.convertPosToZeroBased(range.start);
             const end = this.convertPosToZeroBased(range.end);
             const clampedStart = this.clampTextPosition(start);
             const clampedEnd = this.clampTextPosition(end);
+            if (clampedStart.line === clampedEnd.line) {
+                return this.lines[clampedStart.line].slice(clampedStart.col, clampedEnd.col);
+            }
             return [
-                this.lines[clampedStart.line].slice(0, clampedStart.col),
+                this.lines[clampedStart.line].slice(clampedStart.col),
                 ...this.lines.slice(clampedStart.line + 1, clampedEnd.line),
                 this.lines[clampedEnd.line].slice(clampedEnd.col),
             ].join('\n');
@@ -228,7 +231,7 @@ class TextStore {
             currentLine++;
         }
         offset += col;
-        return offset;
+        return offset + 1;
     }
 
     private convertPosToZeroBased(pos: ITextPosition) {
@@ -248,9 +251,9 @@ class TextStore {
     }
 
     private clampTextPosition(pos: ITextPosition) {
-        const clampedLine = clamp(pos.line, 1, this.lines.length);
+        const clampedLine = clamp(pos.line, 0, this.lines.length);
         return {
-            col: clamp(pos.col, 1, this.lines[clampedLine].length),
+            col: clamp(pos.col, 0, this.lines[clampedLine].length),
             line: clampedLine,
         } as ITextPosition;
     }
