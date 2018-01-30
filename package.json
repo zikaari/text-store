@@ -2,9 +2,11 @@
   "name": "text-store",
   "version": "1.0.5",
   "description": "Super performant text container built upon caches",
-  "main": "lib/index.js",
-  "typings": "lib/typings/index.d.ts",
+  "main": "build/index.js",
+  "typings": "build/typings/index.d.ts",
   "scripts": {
+    "prepublishOnly": "npm run release",
+    "release": "npm run build & npm run docs",
     "build": "tsc",
     "watch": "tsc -w",
     "docs": "npm run _generate-docs & npm run _publish-docs",
