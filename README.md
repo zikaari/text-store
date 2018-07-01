@@ -17,7 +17,7 @@ const bigA$$File = new TextStore('really big file');
 
 ```
 
-## [Documentation](https://chipto.github.io/text-store/classes/textstore.html)
+## [Documentation](https://neeksandhu.github.io/text-store/classes/textstore.html)
 
 ## You might want it if:
 
