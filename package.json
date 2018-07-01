@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chipto/text-store.git"
+    "url": "git+https://github.com/NeekSandhu/text-store.git"
   },
   "keywords": [
     "text",
@@ -27,9 +27,9 @@
   "author": "Neek Sandhu <neek.sandhu@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chipto/text-store/issues"
+    "url": "https://github.com/NeekSandhu/text-store/issues"
   },
-  "homepage": "https://github.com/chipto/text-store#readme",
+  "homepage": "https://github.com/NeekSandhu/text-store#readme",
   "devDependencies": {
     "gh-pages": "^1.1.0",
     "typedoc": "^0.9.0",
