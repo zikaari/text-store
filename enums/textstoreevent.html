@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ITextRange | text-store</title>
+	<title>TextStoreEvent | text-store</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,57 +56,60 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="itextrange.html">ITextRange</a>
+					<a href="textstoreevent.html">TextStoreEvent</a>
 				</li>
 			</ul>
-			<h1>Interface ITextRange</h1>
+			<h1>Enumeration TextStoreEvent</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">ITextRange</span>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itextrange.html#end" class="tsd-kind-icon">end</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itextrange.html#start" class="tsd-kind-icon">start</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="textstoreevent.html#insert" class="tsd-kind-icon">Insert</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="textstoreevent.html#remove" class="tsd-kind-icon">Remove</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="textstoreevent.html#replace" class="tsd-kind-icon">Replace</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="end" class="tsd-anchor"></a>
-					<h3>end</h3>
-					<div class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbol">:</span> <a href="itextposition.html" class="tsd-signature-type">ITextPosition</a></div>
+				<h2>Enumeration members</h2>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="insert" class="tsd-anchor"></a>
+					<h3>Insert</h3>
+					<div class="tsd-signature tsd-kind-icon">Insert<span class="tsd-signature-symbol">:</span> </div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in TextStore.ts:404</li>
+							<li>Defined in TextStore.ts:10</li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="start" class="tsd-anchor"></a>
-					<h3>start</h3>
-					<div class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">:</span> <a href="itextposition.html" class="tsd-signature-type">ITextPosition</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="remove" class="tsd-anchor"></a>
+					<h3>Remove</h3>
+					<div class="tsd-signature tsd-kind-icon">Remove<span class="tsd-signature-symbol">:</span> </div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in TextStore.ts:403</li>
+							<li>Defined in TextStore.ts:11</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="replace" class="tsd-anchor"></a>
+					<h3>Replace</h3>
+					<div class="tsd-signature tsd-kind-icon">Replace<span class="tsd-signature-symbol">:</span> </div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in TextStore.ts:12</li>
 						</ul>
 					</aside>
 				</section>
@@ -122,9 +125,24 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum">
-						<a href="../enums/textstoreevent.html" class="tsd-kind-icon">Text<wbr>Store<wbr>Event</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-enum">
+						<a href="textstoreevent.html" class="tsd-kind-icon">Text<wbr>Store<wbr>Event</a>
+						<ul>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="textstoreevent.html#insert" class="tsd-kind-icon">Insert</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="textstoreevent.html#remove" class="tsd-kind-icon">Remove</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="textstoreevent.html#replace" class="tsd-kind-icon">Replace</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-is-not-exported">
 						<a href="../classes/cachedtostring.html" class="tsd-kind-icon">Cached<wbr>ToString</a>
 					</li>
@@ -141,34 +159,22 @@
 						<a href="../classes/vcache.html" class="tsd-kind-icon">VCache</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="idisposable.html" class="tsd-kind-icon">IDisposable</a>
+						<a href="../interfaces/idisposable.html" class="tsd-kind-icon">IDisposable</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="itextposition.html" class="tsd-kind-icon">IText<wbr>Position</a>
-					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="itextrange.html" class="tsd-kind-icon">IText<wbr>Range</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="itextrange.html#end" class="tsd-kind-icon">end</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="itextrange.html#start" class="tsd-kind-icon">start</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="after-current">
-					<li class=" tsd-kind-interface">
-						<a href="itextstoreinsertevent.html" class="tsd-kind-icon">IText<wbr>Store<wbr>Insert<wbr>Event</a>
+						<a href="../interfaces/itextposition.html" class="tsd-kind-icon">IText<wbr>Position</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="itextstoreremoveevent.html" class="tsd-kind-icon">IText<wbr>Store<wbr>Remove<wbr>Event</a>
+						<a href="../interfaces/itextrange.html" class="tsd-kind-icon">IText<wbr>Range</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="itextstorereplaceevent.html" class="tsd-kind-icon">IText<wbr>Store<wbr>Replace<wbr>Event</a>
+						<a href="../interfaces/itextstoreinsertevent.html" class="tsd-kind-icon">IText<wbr>Store<wbr>Insert<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/itextstoreremoveevent.html" class="tsd-kind-icon">IText<wbr>Store<wbr>Remove<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/itextstorereplaceevent.html" class="tsd-kind-icon">IText<wbr>Store<wbr>Replace<wbr>Event</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#changecallback" class="tsd-kind-icon">Change<wbr>Callback</a>

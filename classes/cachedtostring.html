@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ITextRange | text-store</title>
+	<title>CachedToString | text-store</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="itextrange.html">ITextRange</a>
+					<a href="cachedtostring.html">CachedToString</a>
 				</li>
 			</ul>
-			<h1>Interface ITextRange</h1>
+			<h1>Class CachedToString</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ITextRange</span>
+						<span class="target">CachedToString</span>
 					</li>
 				</ul>
 			</section>
@@ -78,37 +78,77 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itextrange.html#end" class="tsd-kind-icon">end</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="itextrange.html#start" class="tsd-kind-icon">start</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported"><a href="cachedtostring.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="cachedtostring.html#getstringvalue" class="tsd-kind-icon">get<wbr>String<wbr>Value</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="end" class="tsd-anchor"></a>
-					<h3>end</h3>
-					<div class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbol">:</span> <a href="itextposition.html" class="tsd-signature-type">ITextPosition</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in TextStore.ts:404</li>
-						</ul>
-					</aside>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Cached<wbr>ToString<span class="tsd-signature-symbol">(</span>store<span class="tsd-signature-symbol">: </span><a href="textstore.html" class="tsd-signature-type">TextStore</a>, lines<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="cachedtostring.html" class="tsd-signature-type">CachedToString</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in CachedToString.ts:11</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>store: <a href="textstore.html" class="tsd-signature-type">TextStore</a></h5>
+								</li>
+								<li>
+									<h5>lines: <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="cachedtostring.html" class="tsd-signature-type">CachedToString</a></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="start" class="tsd-anchor"></a>
-					<h3>start</h3>
-					<div class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">:</span> <a href="itextposition.html" class="tsd-signature-type">ITextPosition</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in TextStore.ts:403</li>
-						</ul>
-					</aside>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getstringvalue" class="tsd-anchor"></a>
+					<h3>get<wbr>String<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>String<wbr>Value<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><a href="../interfaces/itextposition.html" class="tsd-signature-type">ITextPosition</a>, end<span class="tsd-signature-symbol">: </span><a href="../interfaces/itextposition.html" class="tsd-signature-type">ITextPosition</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in CachedToString.ts:16</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>start: <a href="../interfaces/itextposition.html" class="tsd-signature-type">ITextPosition</a></h5>
+								</li>
+								<li>
+									<h5>end: <a href="../interfaces/itextposition.html" class="tsd-signature-type">ITextPosition</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -125,50 +165,50 @@
 					<li class=" tsd-kind-enum">
 						<a href="../enums/textstoreevent.html" class="tsd-kind-icon">Text<wbr>Store<wbr>Event</a>
 					</li>
-					<li class=" tsd-kind-class tsd-is-not-exported">
-						<a href="../classes/cachedtostring.html" class="tsd-kind-icon">Cached<wbr>ToString</a>
-					</li>
-					<li class=" tsd-kind-class tsd-is-not-exported">
-						<a href="../classes/node.html" class="tsd-kind-icon">Node</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../classes/scache.html" class="tsd-kind-icon">SCache</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="../classes/textstore.html" class="tsd-kind-icon">Text<wbr>Store</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../classes/vcache.html" class="tsd-kind-icon">VCache</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="idisposable.html" class="tsd-kind-icon">IDisposable</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="itextposition.html" class="tsd-kind-icon">IText<wbr>Position</a>
-					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="itextrange.html" class="tsd-kind-icon">IText<wbr>Range</a>
+					<li class="current tsd-kind-class tsd-is-not-exported">
+						<a href="cachedtostring.html" class="tsd-kind-icon">Cached<wbr>ToString</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="itextrange.html#end" class="tsd-kind-icon">end</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+								<a href="cachedtostring.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="itextrange.html#start" class="tsd-kind-icon">start</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="cachedtostring.html#getstringvalue" class="tsd-kind-icon">get<wbr>String<wbr>Value</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface">
-						<a href="itextstoreinsertevent.html" class="tsd-kind-icon">IText<wbr>Store<wbr>Insert<wbr>Event</a>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="node.html" class="tsd-kind-icon">Node</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter tsd-is-not-exported">
+						<a href="scache.html" class="tsd-kind-icon">SCache</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="textstore.html" class="tsd-kind-icon">Text<wbr>Store</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter tsd-is-not-exported">
+						<a href="vcache.html" class="tsd-kind-icon">VCache</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="../interfaces/idisposable.html" class="tsd-kind-icon">IDisposable</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="itextstoreremoveevent.html" class="tsd-kind-icon">IText<wbr>Store<wbr>Remove<wbr>Event</a>
+						<a href="../interfaces/itextposition.html" class="tsd-kind-icon">IText<wbr>Position</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="itextstorereplaceevent.html" class="tsd-kind-icon">IText<wbr>Store<wbr>Replace<wbr>Event</a>
+						<a href="../interfaces/itextrange.html" class="tsd-kind-icon">IText<wbr>Range</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/itextstoreinsertevent.html" class="tsd-kind-icon">IText<wbr>Store<wbr>Insert<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/itextstoreremoveevent.html" class="tsd-kind-icon">IText<wbr>Store<wbr>Remove<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/itextstorereplaceevent.html" class="tsd-kind-icon">IText<wbr>Store<wbr>Replace<wbr>Event</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#changecallback" class="tsd-kind-icon">Change<wbr>Callback</a>
