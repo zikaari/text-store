@@ -33,11 +33,10 @@
   "devDependencies": {
     "gh-pages": "^1.1.0",
     "tslint": "^5.12.0",
-    "typedoc": "^0.9.0",
-    "typescript": "^2.6.2"
+    "typedoc": "^0.14.0",
+    "typescript": "^3.2.2"
   },
   "dependencies": {
-    "clamp": "^1.0.1",
-    "notificar": "^1.0.1"
+    "clamp": "^1.0.1"
   }
 }
