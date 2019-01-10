@@ -5,6 +5,7 @@
     ],
     "jsRules": {},
     "rules": {
+        "semicolon": [true, "never"],
         "max-classes-per-file": false,
         "quotemark": false
     },
