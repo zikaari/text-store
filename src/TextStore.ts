@@ -49,6 +49,7 @@ class TextStore {
     private size: number
     private indexToPosCache: SCache<ITextPosition>
     private lineToIndexCache: VCache<number>
+    private versionNumber: number
 
     /**
      * Retruns a new interactive `TextStore` built off of given string (default '')
@@ -61,6 +62,15 @@ class TextStore {
         this.lines = str.split(/\n/)
         this.indexToPosCache = new SCache()
         this.lineToIndexCache = new VCache()
+        this.versionNumber = 0
+        this.onDidChange(() => this.versionNumber++)
+    }
+
+    /**
+     * Every change (any type) will increment the version number by one
+     */
+    public get version() {
+        return this.versionNumber
     }
 
     public onDidChange(callback: ChangeCallback): IDisposable {
